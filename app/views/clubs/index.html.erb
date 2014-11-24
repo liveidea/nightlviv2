@@ -1,0 +1,14 @@
+
+<div class="container" style="margin-top: 60px">
+    <div class="row">
+    	
+
+    	<%- @club.each do |club| %>
+    	<Strong><%= club.name %></Strong>
+    	<td><%= link_to 'Детальніше', club %></td>
+    	<td><%= link_to 'Відредагувати', edit_club_path(club) %></td><br><br>
+    	<% end %>
+
+	</div>
+</div>
+</div>
