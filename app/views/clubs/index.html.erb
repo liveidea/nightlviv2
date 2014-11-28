@@ -1,14 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body {
+	background-image: url('assets/back.jpg');
+	background-size: 100%; 
+     background-repeat: no-repeat;
+    background-attachment: fixed;
 
+}
+h2{
+     text-align:  left;
+
+}
+
+.button{
+    text-align: bottom;
+
+}
+.block1 { 
+    
+
+  overflow: hidden;
+  padding: 25px;
+  border: solid 1px black;
+  background:  #D8BFD8;
+  width: 90%;
+  height: 100%;
+  border: solid 1px black;
+  border-radius: 30px;
+  margin: 25px auto;
+  opacity: 0.6;
+      position: relative;
+}
+  
+</style>
+</head>
+<body>
 <div class="container" style="margin-top: 60px">
     <div class="row">
     	
-
+        
     	<%- @club.each do |club| %>
-    	<Strong><%= club.name %></Strong>
-    	<td><%= link_to 'Детальніше', club %></td>
-    	<td><%= link_to 'Відредагувати', edit_club_path(club) %></td><br><br>
+    	<div class="block1">
+    	<h2><%= club.name %></h2>
+        <%= link_to  club do %>
+        <button type="button" class="btn btn-primary">Детальніше</button> 
+        <%end%>
+        <%= link_to  edit_club_path(club) do %>
+        <button type="button" class="btn btn-primary">Відредагути</button> 
+        <%end%>
+    	<br><br>
+    	</div>
     	<% end %>
+       
+
 
 	</div>
 </div>
 </div>
+</body>
+<html>
