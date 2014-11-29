@@ -34,6 +34,10 @@ gem 'devise-bootstrap-views'
 
 gem 'devise'
 
+gem 'carrierwave'
+
+gem 'foursquare2'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
