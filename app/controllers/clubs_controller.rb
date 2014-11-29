@@ -1,6 +1,6 @@
 class ClubsController < ApplicationController
 
-before_action :set_club, only: [:show, :edit, :update]
+before_action :set_club, only: [:show, :edit, :update, :show_photo]
 
 def new
 	@club = Club.new
@@ -12,6 +12,10 @@ end
 
 def show
 	
+end
+
+def show_photo
+
 end
 
 def edit
