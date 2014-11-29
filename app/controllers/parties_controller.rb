@@ -13,7 +13,7 @@ def show
 end
 
 def create
-	 @party = Party.new(party_params)
+	@party = Party.new(party_params)
     @party.save
     redirect_to @party
  end
