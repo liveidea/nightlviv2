@@ -1,0 +1,31 @@
+  <div class="container" style="margin-top: 60px">
+	<div class="row">
+ <p>
+  <strong>Назва:</strong>
+  <%= @party.name %>
+</p>
+ <p>
+  <strong>Дата:</strong>
+  <%= @party.date %>
+</p>
+
+<p>
+	  <strong>Ціна:</strong>
+  <%= @party.price %>
+</p>
+
+<p>
+	  <strong>Клуб:</strong>
+  <%= @party.club_id %>
+</p>
+
+
+ <p>
+  <strong>Про вечірку:</strong>
+  <%= @party.about %>
+</p>
+
+ <%= link_to 'Назад', parties_path %>
+
+</div>
+</div>

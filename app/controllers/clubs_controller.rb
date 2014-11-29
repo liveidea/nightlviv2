@@ -32,7 +32,9 @@ def create
       render 'edit'
     end
   end
-
+ def set_club
+      @club = Club.find(params[:id])
+    end
 
 private
     def club_params
