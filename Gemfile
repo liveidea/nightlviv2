@@ -37,10 +37,6 @@ gem 'devise'
 gem 'carrierwave'
 
 gem 'foursquare2'
-<<<<<<< HEAD
-=======
-
->>>>>>> e1c974a50160f0343abcbd8ebdde540fa5b200dc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
