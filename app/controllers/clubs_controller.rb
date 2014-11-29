@@ -1,5 +1,5 @@
 class ClubsController < ApplicationController
-
+#ce function set_club, she do in show edit updatei t.d.
 before_action :set_club, only: [:show, :edit, :update, :show_photo]
 
 def new
@@ -15,6 +15,13 @@ def show
 end
 
 def show_photo
+  client_id = 'IWFWKYLXEAXL4A2VPLHM5NYZ2J445Z5TZEDYRZ1ZPTMYQ3KE'
+  client_secret = 'GBYSS3Q0IUEZQOLEZZOZHPQWKYXFVK2HAHTUUUV0JKKP255A'
+  today = (Date.today).strftime("%Y%m%d")
+  @client = Foursquare2::Client.new(:client_id => client_id, :client_secret => client_secret, :api_version => today)
+  @hash = @client.venue_photos(@club.forsquare_id, options = {:group => 'venue'})
+  @photos = @hash["items"].collect{|f| [f["id"], f["createdAt"], "#{f['prefix']}original#{f['suffix']}"]}
+
 
 end
 

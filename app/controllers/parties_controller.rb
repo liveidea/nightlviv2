@@ -1,6 +1,6 @@
 class PartiesController < ApplicationController
 
-before_action :
+
 
 def index
 	@party = Party.all
@@ -34,6 +34,7 @@ def create
  	else
  		redirect 'update'
  end
+end
 
 private
 def party_params
