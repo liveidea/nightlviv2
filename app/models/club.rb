@@ -9,19 +9,27 @@ class Club < ActiveRecord::Base
 	  client_secret = 'GBYSS3Q0IUEZQOLEZZOZHPQWKYXFVK2HAHTUUUV0JKKP255A'
 	  today = (Date.today).strftime("%Y%m%d")
 	  client = Foursquare2::Client.new(:client_id => client_id, :client_secret => client_secret, :api_version => today)
-	  hash = client.venue_photos(forsquare_id, options: {:group => 'venue'})
-	  photos_fs = hash["items"].collect{|f| [f["id"], f["createdAt"], "#{f['prefix']}original#{f['suffix']}"]}
-
-      new_photos = 0
-
-      photos_fs.each do |fi| 
-        unless photo_ids.include?(fi[0])
-        	p "adding photo... #{fi[0]}"
-	    	data  = DateTime.strptime(fi[1].to_s,'%s')
-	    	p = self.photos.new(photo_foursquare_id: fi[0], remote_image_url: fi[2])
-	        p.save
-        end 
-      end
+	  limit = 30
+	  offset = 0
+	  new_photos = 0
+	  count = 1
+      while count != 0 
+        hash = client.venue_photos(forsquare_id, :group => 'venue', :limit => limit, :offset => offset)
+        photos_fs = hash["items"].collect{|f| [f["id"], f["createdAt"], "#{f['prefix']}original#{f['suffix']}"]}   
+        count = hash["count"].to_i
+        offset = offset+limit  
+        photos_fs.each do |fi| 
+        	unless photo_ids.include?(fi[0])
+        		p "adding photo... #{fi[0]}"
+	    		data  = DateTime.strptime(fi[1].to_s,'%s')
+	   		    p = self.photos.new(photo_foursquare_id: fi[0], remote_image_url: fi[2], date: data)
+	       	 	p.save					
+	        	new_photos+=1
+	       # else
+	      	# 	count = 0
+	        end
+        end
+      end 
       new_photos
 	end
 end

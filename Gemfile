@@ -40,6 +40,9 @@ gem 'foursquare2'
 
 gem "pry"
 
+gem "mini_magick"
+
+gem "kaminari"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
