@@ -3,9 +3,8 @@ Rails.application.routes.draw do
   resources :admins
   resources :photos 
   resources :clubs do 
-    member do 
-      get :show_photo
-    end
+    resources :photos 
+    
   end
   resources :parties
   # The priority is based upon order of creation: first created -> highest priority.

@@ -4,8 +4,16 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+zanzibar: 
+  name: "Zanzibar"
+  address: "qwerty"
+  about: "good club"
+  photo_id: f_one
+  forsquare_id: "4dbf2de10cb6f21c126d9cbf"
+shokolad: 
+  name: "Shokolad"
+  address: "zelena"
+  about: "bad club"
+  photo_id: f_two
+  forsquare_id: "4d03b490e350b60c81b97e42"
+

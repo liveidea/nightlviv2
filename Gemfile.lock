@@ -75,11 +75,15 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
+    kaminari (0.16.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     libv8 (3.16.14.7)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.4.3)
+    mini_magick (4.0.1)
     minitest (5.4.3)
     multi_json (1.10.1)
     multipart-post (2.0.0)
@@ -162,6 +166,8 @@ DEPENDENCIES
   foursquare2
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
+  mini_magick
   mysql2
   pry
   rails (= 4.1.7)

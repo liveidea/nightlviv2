@@ -4,8 +4,18 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
+f_one: 
+  image: "56524038_R411qd7XLk9yrv-adPvDtqgSynl7xppdOBJNAYwWLoY.jpg"
+  party: one
+  club: zanzibar
+  date: "2001-2-2"
+  photo_foursquare_id: "34343434343"
+  # column: value
 #
-two: {}
-#  column: value
+f_two: 
+  image: "56524038_R411qd7XLk9yrv-adPvDtqgSynl7xppdOBJ222NAYwWLoY.jpg"
+  party: two
+  club: shokolad
+  date: "2002-2-2"
+  photo_foursquare_id: "343434324343"
+  #  column: value
