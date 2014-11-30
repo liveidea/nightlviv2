@@ -1,8 +1,13 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<%= @allphoto %>
+
+
+ <div class="container" style="margin-top: 60px">
+	<div class="row">
+		<div id="photos">
+			<div class="page">
+ 				<%= render @photos %>
+			</div>
+		</div>
+		<%= paginate @photos %>
+		<%= link_to 'назад', clubs_path %>
+	</div>
+</div>

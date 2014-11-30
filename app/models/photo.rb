@@ -1,5 +1,6 @@
 class Photo < ActiveRecord::Base
 	mount_uploader :image, PhotoUploader
-	belongs_to :parties
-	belongs_to :clubs
+	belongs_to :party
+	belongs_to :club
+	 paginates_per 9
 end

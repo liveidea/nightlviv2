@@ -4,8 +4,16 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
+one: 
+  name: "one party"
+  price: 50
+  date: "2002-2-2"
+  about: "first party"
+  club: zanzibar
+two: 
+  name: "two party"
+  price: 100
+  date: "2000-2-2"
+  about: "second party"
+  club: shokolad
 #  column: value
