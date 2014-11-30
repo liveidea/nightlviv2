@@ -166,10 +166,7 @@ DEPENDENCIES
   foursquare2
   jbuilder (~> 2.0)
   jquery-rails
-<<<<<<< HEAD
-=======
   kaminari
->>>>>>> cafa74b0857ef0858905e2a6bcfcc3a1143ecb5e
   mini_magick
   mysql2
   pry
