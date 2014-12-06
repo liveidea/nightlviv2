@@ -16,6 +16,7 @@ end
 
 def show
 	@party = Party.find(params[:id])
+	@club = Club.find(@party.club_id)
 end
 
 def edit
