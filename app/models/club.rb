@@ -25,8 +25,8 @@ class Club < ActiveRecord::Base
 	   		    p = self.photos.new(photo_foursquare_id: fi[0], remote_image_url: fi[2], date: data)
 	       	 	p.save					
 	        	new_photos+=1
-	       # else
-	      	# 	count = 0
+	        else
+	      		count = 0
 	        end
         end
       end 
