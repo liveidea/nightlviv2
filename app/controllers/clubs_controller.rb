@@ -3,13 +3,17 @@ class ClubsController < ApplicationController
 before_action :set_club, only: [:show, :edit, :update, :show_photo]
 
 def new
+  if !admin_signed_in?
+      redirect_to action: "index"
+  else
 	@club = Club.new
+end
 end
 
 def index
 
 	@club = Club.all
-  
+
 end
 
 def show
@@ -19,7 +23,10 @@ end
 
 
 def edit
-	
+	   if !admin_signed_in?
+      redirect_to @club
+     end
+
 end
 
 def create
@@ -33,9 +40,9 @@ def create
 end
 
 def update
-    
-  if @club.update(club_params)
-      redirect_to @club
+          
+  if @club.update(club_params) &&  admin_signed_in? 
+        redirect_to @club
   else
       render 'edit'
   end

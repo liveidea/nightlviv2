@@ -1,6 +1,6 @@
 class PartiesController < ApplicationController
 
-
+before_action :set_party, only: [:show, :edit, :update]
 
 def index
 	@party = Party.all
@@ -11,16 +11,21 @@ def set_party
 end
 
 def new
+	if !admin_signed_in?
+      redirect_to action: "index"
+    else
 	@party = Party.new
+	end
 end
 
 def show
-	@party = Party.find(params[:id])
 	@club = Club.find(@party.club_id)
 end
 
 def edit
-	@party = Party.find(params[:id])
+	 if !admin_signed_in?
+      redirect_to @party
+     end
 end
 
 
@@ -34,7 +39,6 @@ def create
  end
 
  def update
- 	@party = Party.find (params[:id])
  	if @party.update(party_params)
  		 redirect_to @party
  	else
