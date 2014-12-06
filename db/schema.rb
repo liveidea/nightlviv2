@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141129133035) do
+ActiveRecord::Schema.define(version: 20141206102738) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -53,12 +53,13 @@ ActiveRecord::Schema.define(version: 20141129133035) do
 
   create_table "photos", force: true do |t|
     t.string   "image"
-    t.integer  "party_id"
     t.integer  "club_id"
     t.date     "date"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_foursquare_id"
   end
+
+  add_index "photos", ["date"], name: "index_photos_on_date", using: :btree
 
 end
