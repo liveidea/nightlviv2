@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
   devise_for :admins
   resources :admins
-  resources :photos 
+  resources :photos
+  resources :parties do
+    resources :photos
+  end
   resources :clubs do 
     resources :photos 
-    
   end
-  resources :parties
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -14,7 +17,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
 
-  # Example of regular route:
+  
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

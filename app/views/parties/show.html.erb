@@ -24,7 +24,7 @@
   <strong>Про вечірку:</strong>
   <%= @party.about %>
 </p>
-
+<%= link_to 'фото',  party_photo_path(@party, @party)%> 
  <%= link_to 'Назад', parties_path %>
 
 </div>

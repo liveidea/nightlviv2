@@ -40,7 +40,7 @@
 
   <p>
     <%= f.label :Клуб %><br>
-    <%= f.select :club, Club.all%>
+    <%= f.select :club_id, Club.all.collect {|x| [x.name, x.id]} %>
   
   </p>
 

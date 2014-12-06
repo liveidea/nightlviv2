@@ -14,22 +14,7 @@ def show
 	
 end
 
-def show_photo
-  
-    client_id = 'IWFWKYLXEAXL4A2VPLHM5NYZ2J445Z5TZEDYRZ1ZPTMYQ3KE'
-    client_secret = 'GBYSS3Q0IUEZQOLEZZOZHPQWKYXFVK2HAHTUUUV0JKKP255A'
-    today = (Date.today).strftime("%Y%m%d")
-    fid ="4dbf2de10cb6f21c126d9cbf"
-    client = Foursquare2::Client.new(:client_id => client_id, :client_secret => client_secret, :api_version => today)
-    limit = 100
-    offset = 0
-    begin 
-      hash = client.venue_photos(fid, :group => 'venue', :limit => limit, :offset => offset)
-      photos_fs = hash["items"].collect{|f| [f["id"], f["createdAt"], "#{f['prefix']}original#{f['suffix']}"]}   
-      count = hash["count"] 
-      offset = offset+limit   
-    end while count != 0
-end
+
 
 def edit
 	

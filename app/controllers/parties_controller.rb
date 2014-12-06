@@ -18,6 +18,11 @@ def show
 	@party = Party.find(params[:id])
 end
 
+def edit
+	@party = Party.find(params[:id])
+end
+
+
 def create
 	@party = Party.new(party_params)
     if @party.save
@@ -30,11 +35,13 @@ def create
  def update
  	@party = Party.find (params[:id])
  	if @party.update(party_params)
- 		@party.save
+ 		 redirect_to @party
  	else
- 		redirect 'update'
+ 		redirect 'edit'
  end
 end
+
+
 
 private
 def party_params
