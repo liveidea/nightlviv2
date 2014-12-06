@@ -11,8 +11,8 @@
     	
     	<h3><%= party.name %></h3>
         <h5><%= party.date %></h5>
-        <%= link_to  party  do %>
-          <button type="button" class="btn btn-primary">Детальна інформація</button> 
+        <%= link_to  party_photo_path(party, party) do %>
+          <button type="button" class="btn btn-primary">Фото</button> 
         <%end%>
         <% if admin_signed_in? %>
           <%= link_to  edit_party_path(@party) do %>
