@@ -15,7 +15,7 @@ end
 		if (params[:club_id])
 			@photos = Photo.where(club_id: params[:club_id]).page(params[:page])
 		else
-		    @photos = Photo.all.page(params[:page])
+		    @photos = Photo.all.order(date: :desc).page(params[:page])
 		end
 	end
 end

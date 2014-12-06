@@ -1,6 +1,7 @@
 <%# add navigation links to this file %>
 <li><%= link_to 'Клуби', clubs_path %></li>
 <li><%= link_to 'Вечірки', parties_path %></li>
+<li><%= link_to 'Фото', photos_path %></li>
 <% if admin_signed_in? %>
 <li><%= link_to 'Редагувати акаунт', edit_admin_registration_path %></li>
 <li><%= link_to 'Вийти з акаунта', destroy_admin_session_path, :method=>'delete' %></li>
