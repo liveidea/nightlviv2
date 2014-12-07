@@ -1,29 +1,26 @@
-<div class="container" style="margin-top: 60px">
-    <div class="row">
-    	
-    	<% if admin_signed_in? %>
-          <%= link_to  new_party_path do %>
-            <button type="button" class="btn btn-primary">Додати вечірку</button> 
-          <%end%>
-      <% end %>
+<body class="body1">
+ <div class="container" style="margin-top: 60px">
+  <div class="row">
+    <% if admin_signed_in? %>
+     <%= link_to  new_party_path do %>
+     <button type="button" class="btn btn-primary">Додати вечірку</button> 
+     <%end%>
+    <% end %>
         
-    	<%- @party.each do |party| %>
-    	
+    <%- @party.each do |party| %>
+     <div class="block1">
     	<h3><%= party.name %></h3>
-        <h5><%= party.date %></h5>
-        <%= link_to  party_photo_path(party, party) do %>
-          <button type="button" class="btn btn-primary">Фото</button> 
+      <h5><%= party.date %></h5>
+      <%= link_to  party_photo_path(party, party) do %>
+       <button type="button" class="btn btn-primary">Фото</button> 
+      <%end%>
+      <% if admin_signed_in? %>
+        <%= link_to  edit_party_path(party) do %>
+        <button type="button" class="btn btn-primary">Редагувати</button> 
         <%end%>
-        <% if admin_signed_in? %>
-          <%= link_to  edit_party_path(@party) do %>
-            <button type="button" class="btn btn-primary">Редагувати</button> 
-          <%end%>
-      <% end %>  
-    	<% end %>
-       
-
-
-</div>
-</div>
+      <% end %> 
+    </div> 
+  <% end %>
+  </div>
+ </div>
 </body>
-<html>
