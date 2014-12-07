@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: djbwscjxl
+  api_key: '483411136642477'
+  api_secret: ELrobrpUx0U5xsrWgdUxtGKerxU
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: djbwscjxl
+  api_key: '483411136642477'
+  api_secret: ELrobrpUx0U5xsrWgdUxtGKerxU
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: djbwscjxl
+  api_key: '483411136642477'
+  api_secret: ELrobrpUx0U5xsrWgdUxtGKerxU
+  enhance_image_tag: true
+  static_image_support: false

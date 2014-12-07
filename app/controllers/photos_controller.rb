@@ -16,8 +16,6 @@ end
 
 
 	def index
-		
-			
 		@photos = Photo.all.order(date: :desc).page(params[:page])
 	end
 end
