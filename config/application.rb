@@ -18,8 +18,11 @@ module Nightlviv4
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     #config.i18n.load_path += Dir[Rails.root.join('app', 'uploaders').to_s]
-    # config.i18n.default_locale = :de
+    config.i18n.default_locale = :uk
     OpenSSL::SSL.send(:remove_const, :VERIFY_PEER)
     OpenSSL::SSL.const_set(:VERIFY_PEER, OpenSSL::SSL::VERIFY_NONE) 
+    config.i18n.available_locales = [:en, :uk]
+    config.i18n.fallbacks = {'en' => 'uk'}
+
   end
 end
