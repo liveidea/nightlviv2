@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
-
+   get '/clubs/:club_id/images', to: 'photos#look', as: 'images'
 
   
   #   get 'products/:id' => 'catalog#view'

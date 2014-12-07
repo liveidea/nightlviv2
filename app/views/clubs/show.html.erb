@@ -1,21 +1,8 @@
   <div class="container" style="margin-top: 60px">
 	<div class="row">
- <p>
-  <strong>Назва:</strong>
-  <%= @club.name %>
-</p>
- <p>
-  <strong>Адресса:</strong>
-  <%= @club.address %>
-</p>
+ 		<%= render 'show' %>
+ 		<%= link_to 'Назад', clubs_path %>
+  		<%= link_to 'фото', club_photos_path(@club) %>
 
- <p>
-  <strong>Про клуб:</strong>
-  <%= @club.about %>
-</p>
-
- <%= link_to 'Назад', clubs_path %>
-  <%= link_to 'фото', club_photos_path(@club) %>
-
-</div>
-</div>
+	</div>
+ </div>
