@@ -7,7 +7,7 @@ def new
       redirect_to action: "index"
   else
 	@club = Club.new
-end
+  end
 end
 
 def index
