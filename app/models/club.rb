@@ -13,12 +13,13 @@ class Club < ActiveRecord::Base
 	  offset = 0
 	  new_photos = 0
 	  count = 1
-      while count != 0 
+      while count != 0 && photos_fs.count !=0 
         hash = client.venue_photos(forsquare_id, :group => 'venue', :limit => limit, :offset => offset)
         photos_fs = hash["items"].collect{|f| [f["id"], f["createdAt"], "#{f['prefix']}original#{f['suffix']}"]}   
         count = hash["count"].to_i
         p "count = #{count}"
         offset = offset+limit  
+        p "photos count = #{photos_fs.count}"
         photos_fs.each do |fi| 
         	unless photo_ids.include?(fi[0])
         		p "adding photo... #{fi[0]}"
