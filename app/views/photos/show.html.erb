@@ -2,7 +2,8 @@
 	 <div class="container" style="margin-top: 60px">
 		<div class="row">
 			<%- @photos.each do |p| %>
-			<%= image_tag p.image_url(:thumb) %>
+			
+			<%= image_tag p.image_url(:standard), {:class => 'img_rounded'} %>
 			<% end %>
 		<br><%= link_to 'назад', party_path %>
 		</div>

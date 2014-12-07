@@ -1,21 +1,25 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  resources :admins
-  resources :photos
-  resources :parties do
+  scope "(:locale)" do
+    devise_for :admins
+    resources :admins
     resources :photos
-  end
+    resources :parties do
+      resources :photos
+    end
  
-  resources :clubs do 
-    resources :photos 
-  end
+    resources :clubs do 
+      resources :photos 
+    end
+
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
    get '/clubs/:club_id/images', to: 'photos#look', as: 'images'
-
+end
   
   #   get 'products/:id' => 'catalog#view'
 
