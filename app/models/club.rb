@@ -17,6 +17,7 @@ class Club < ActiveRecord::Base
         hash = client.venue_photos(forsquare_id, :group => 'venue', :limit => limit, :offset => offset)
         photos_fs = hash["items"].collect{|f| [f["id"], f["createdAt"], "#{f['prefix']}original#{f['suffix']}"]}   
         count = hash["count"].to_i
+        p "count = #{count}"
         offset = offset+limit  
         photos_fs.each do |fi| 
         	unless photo_ids.include?(fi[0])
