@@ -1,2 +1,14 @@
 <body class="body1">
+ <div class="container" style="margin-top: 60px">
+	<div class="row">
+	  <% @clubs.each do |c| %>
+	  	<div class="block1">
+	  	<center><h2><%= c.name %></h2></center>	
+	    <%-c.photos.random.limit(3).each do |cc| %>
+	     <%= image_tag cc.image_url(:thumbnail), {:class => 'img_rounded'} %>
+	     <% end %>
+		</div>
+	  <% end %>
+	</div>
+ </div>	  
 </body>
