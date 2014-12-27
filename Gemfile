@@ -48,7 +48,7 @@ gem 'exifr'
 
 gem 'cloudinary'
 
-gem 'pg', '~> 0.17.1'
+gem 'pg'
 
 gem 'rails_12factor', group: :production
 # Use ActiveModel has_secure_password
