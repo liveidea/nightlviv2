@@ -47,8 +47,6 @@ gem 'kaminari'
 gem 'exifr'
 
 gem 'cloudinary'
-gem 'pg'
-gem 'rails_12factor'
 
 gem 'pg', '~> 0.17.1'
 
