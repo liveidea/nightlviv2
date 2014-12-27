@@ -186,11 +186,7 @@ DEPENDENCIES
   kaminari
   mini_magick
   mysql2
-<<<<<<< HEAD
   pg
-=======
-  pg (~> 0.17.1)
->>>>>>> 386c53a5b9f298cc92dfa5ce5dcde2e22737238d
   pry
   rails (= 4.1.7)
   rails_12factor
