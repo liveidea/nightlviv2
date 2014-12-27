@@ -4,6 +4,7 @@ before_action :set_party, only: [:show, :edit, :update]
 
 def index
 	@party = Party.all
+	@club = Club.all
 end
 
 def set_party

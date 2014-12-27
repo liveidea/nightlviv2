@@ -3,10 +3,10 @@
 	<div class="row">
 	  <% @clubs.each do |c| %>
 	  	<div class="block2">
-	  	<h2><%= link_to c.name, images_path(c) %></h2>	
-	    <%-c.photos.random.limit(5).each do |cc| %>
+	  	<h2><center><%= link_to c.name, images_path(c) %></center></h2>	
+	    <center><%-c.photos.random.limit(5).each do |cc| %>
 	     <%= image_tag cc.image_url(:thumbnail1), {:class => 'img_rounded'} %>
-	     <% end %>
+	     <% end %></center>
 		</div>
 	  <% end %>
 	</div>

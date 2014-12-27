@@ -1,7 +1,7 @@
 uk:
   navigation:
-    club: "Клуб"
-    party: "Вечірка"
+    club: "Клуби"
+    party: "Вечірки"
     photo: "Фото"
     edit_acc: "Редагувати аккаунт"
     logoff: "Вийти"
