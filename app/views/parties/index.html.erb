@@ -5,8 +5,7 @@
      <%= link_to  new_party_path do %>
      <button type="button" class="btn btn-primary">Додати вечірку</button> 
      <%end%>
-    <% end %>
-        
+    <% end %>     
     <%- @party.each do |party| %>
      <div class="block1">
     	<h3><%= party.name %></h3>

@@ -37,6 +37,8 @@ en:
       more_pages:
         display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
   navigations:
+    club: "Club"
+    party: "Party"
     photo: "Photo"
     edit_acc: "Edit_acc"
     log_off: "Log_off"

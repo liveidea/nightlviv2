@@ -22,7 +22,7 @@ module Nightlviv4
     OpenSSL::SSL.send(:remove_const, :VERIFY_PEER)
     OpenSSL::SSL.const_set(:VERIFY_PEER, OpenSSL::SSL::VERIFY_NONE) 
     config.i18n.available_locales = [:en, :uk]
-    config.i18n.fallbacks = {'en' => 'uk'}
+   
 
   end
 end
