@@ -13,11 +13,7 @@ class Club < ActiveRecord::Base
 	  offset = 0
 	  new_photos = 0
 	  count = 1
-<<<<<<< HEAD
-	  photos_fs = [1,2]
-=======
 	  photos_fs = [1, 2, 3, 4, 5, 6]
->>>>>>> 0c16e9b9fe2c703d907a9c7704954b7633158aa1
       while count != 0 && photos_fs.count !=0 
         hash = client.venue_photos(forsquare_id, :group => 'venue', :limit => limit, :offset => offset)
         photos_fs = hash["items"].collect{|f| [f["id"], f["createdAt"], "#{f['prefix']}original#{f['suffix']}"]}   
